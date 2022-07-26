@@ -264,7 +264,7 @@ console.log(addNumObject);
 
 // ====================================================================================
 
-// ПЯТОЕ ЗАДАНИЕ subtraction
+// ПЯТОЕ ЗАДАНИЕ 
 
 let subUndefined;
 let subtUndefined = "строка " - subUndefined;
@@ -378,29 +378,29 @@ if (logAge >= 16 && logAge < 100) {
 
 // ВОСЬМОЕ ЗАДАНИЕ
 
-let yearExperience = prompt("введите ваш трудовой стаж в целых годах");
+let yearExperience = +prompt("введите ваш трудовой стаж в целых годах");
 
 if (yearExperience <= 1) {
   alert('У вас ещё нет надбавки за стаж');
-} else if (yearExperience <= 2) {
+} else if (yearExperience === 2) {
   alert('Ваша надбавка за стаж 5%');
-} else if (yearExperience <= 3) {
+} else if (yearExperience === 3) {
   alert('Ваша надбавка за стаж 10%');
-} else if (yearExperience <= 4) {
+} else if (yearExperience === 4) {
   alert('Ваша надбавка за стаж 15%');
-} else if (yearExperience <= 5) {
+} else if (yearExperience === 5) {
   alert('Ваша надбавка за стаж 20%');
-} else if (yearExperience <= 6) {
+} else if (yearExperience === 6) {
   alert('Ваша надбавка за стаж 25%');
-} else if (yearExperience <= 7) {
+} else if (yearExperience === 7) {
   alert('Ваша надбавка за стаж 30%');
-} else if (yearExperience <= 8) {
+} else if (yearExperience === 8) {
   alert('Ваша надбавка за стаж 35%');
-} else if (yearExperience <= 9) {
+} else if (yearExperience === 9) {
   alert('Ваша надбавка за стаж 40%');
-} else if (yearExperience <= 10) {
+} else if (yearExperience === 10) {
   alert('Ваша надбавка за стаж 45%');
-} else if (yearExperience <= 11) {
+} else if (yearExperience === 11) {
   alert('Ваша надбавка за стаж 50% и это максимальная надбавка, поздравляем');
 } else {
   alert('У вас максимальная надбавка за стаж 50%');
@@ -410,22 +410,22 @@ if (yearExperience <= 1) {
 
 // ДЕВЯТОЕ ЗАДАНИЕ
 
-let day = prompt('Введите день недели.');
+let day = +prompt('Введите день недели.');
 // на иф элсах
 
-if (day == 1) {
+if (day === 1) {
   alert('Monday')
-} else if (day == 2) {
+} else if (day === 2) {
   alert('Tuesday')
-} else if (day == 3) {
+} else if (day === 3) {
   alert('Wednesday')
-} else if (day == 4) {
+} else if (day === 4) {
   alert('Thursday')
-} else if (day == 5) {
+} else if (day === 5) {
   alert('Friday')
-} else if (day == 6) {
+} else if (day === 6) {
   alert('Saturday')
-} else if (day == 7) {
+} else if (day === 7) {
   alert('Sunday')
 } else {
   alert('Ошибка! В неделе 7 дней, нужно ввести какой сегодня день')
@@ -433,25 +433,25 @@ if (day == 1) {
 
 // на свич кейс
 switch (day) {
-  case '1':
+  case 1:
     alert('Monday')
     break;
-  case '2':
+  case 2:
     alert('Tuesday')
     break;
-  case '3':
+  case 3:
     alert('Wednesday')
     break;
-  case '4':
+  case 4:
     alert('Thursday')
     break;
-  case '5':
+  case 5:
     alert('Friday')
     break;
-  case '6':
+  case 6:
     alert('Saturday')
     break;
-  case '7':
+  case 7:
     alert('Sunday')
     break;
 
@@ -462,24 +462,24 @@ switch (day) {
 
 // На тернарном операторе ?
 
-day == 1 ? alert('Monday') :
-  day == 2 ? alert('Tuesday') :
-  day == 3 ? alert('Wednesday') :
-  day == 4 ? alert('Thursday') :
-  day == 5 ? alert('Friday') :
-  day == 6 ? alert('Saturday') :
-  day == 7 ? alert('Sunday') :
+day === 1 ? alert('Monday') :
+  day === 2 ? alert('Tuesday') :
+  day === 3 ? alert('Wednesday') :
+  day === 4 ? alert('Thursday') :
+  day === 5 ? alert('Friday') :
+  day === 6 ? alert('Saturday') :
+  day === 7 ? alert('Sunday') :
   alert('Ошибка! В неделе 7 дней, нужно ввести какой сегодня день');
 
 //====================================================================================
 
 // ДЕСЯТОЕ ЗАДАНИЕ
 
-let numb = prompt('Введите любое число, если заданое число будет меньше нуля, то вы увидете "-1", если равно нулю, то увидете "0", а если больше нуля, то увидете "1"')
+let numb = +prompt('Введите любое число, если заданое число будет меньше нуля, то вы увидете "-1", если равно нулю, то увидете "0", а если больше нуля, то увидете "1"')
 
 if (numb < 0) {
   alert('-1')
-} else if (numb == 0) {
+} else if (numb === 0) {
   alert('0')
 } else {
   alert('1')
@@ -492,9 +492,9 @@ if (numb < 0) {
 let message;
 let login = prompt('Кто вы? Сотрудник или Директор?')
 
-login == 'Сотрудник' ? message = 'Привет!' :
-  login == 'Директор' ? message = 'Здравствуйте!' :
-  login == '' ? message = 'Нет логина' :
+login === 'Сотрудник' ? message = 'Привет!' :
+  login === 'Директор' ? message = 'Здравствуйте!' :
+  login === '' ? message = 'Нет логина' :
   message = '';
 
 alert(message);
@@ -503,7 +503,7 @@ alert(message);
 
 // ДВЕНАДЦАТОЕ ЗАДАНИЕ
 
-let apartment = prompt('Введите номер вашей квартиры от 1 до 90, чтобы увидеть в каком подъезде она находится');
+let apartment = +prompt('Введите номер вашей квартиры от 1 до 90, чтобы увидеть в каком подъезде она находится');
 
 if (apartment <= 0) {
   alert('Такой квартиры не существеует')
@@ -523,9 +523,9 @@ if (apartment <= 0) {
 
 let browser = prompt('Какой у вас браузер, Edge, Chrome, Firefox, Safari or Opera?');
 
-if (browser == 'Edge') {
+if (browser === 'Edge') {
   alert("You've got the Edge!")
-} else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera') {
+} else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
   alert('Okay we support these browsers too')
 } else {
   alert('We hope that this page looks ok!')
