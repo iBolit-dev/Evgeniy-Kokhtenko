@@ -81,8 +81,7 @@ console.log(arr1);
 
 const arrNumToFour = []
 
-for (i = 0; i < 401; i++) {
-  if (i < 4) continue;
+for (i = 4; i < 401; i++) {
   arrNumToFour.push(i);
 }
 
@@ -99,13 +98,8 @@ console.log(arrNumToFour);
 
 const arrNumAddThree = [];
 
-for (i = 0; i < 13;) {
-  if (i < 1) {
-    i++
-  } else {
-    i += 3
-    arrNumAddThree.push(i);
-  };
+for (i = 4; i < 14; i += 3) {
+  arrNumAddThree.push(i);
 }
 
 console.log(arrNumAddThree);
@@ -120,8 +114,8 @@ console.log(arrNumAddThree);
 
 const arrNumToZero = []
 
-for (i = 0; i < 655; i++) {
-  arrNumToZero.splice(0, 0, i)
+for (i = 654; i >= 0; i--) {
+  arrNumToZero.push(i)
 }
 
 console.log(arrNumToZero);
@@ -137,8 +131,7 @@ console.log(arrNumToZero);
 
 const arrNumToYear = []
 
-for (i = 0; i < 2018; i++) {
-  if (i < 1983) continue;
+for (i = 1983; i < 2018; i++) {
   arrNumToYear.push(i);
 }
 
@@ -308,11 +301,18 @@ let prmptProd = +prompt('Введите количество товаров в �
 
 let prodNum = prmptProd % 10;
 
-if (prodNum === 1) {
+
+
+
+if (prmptProd > 9 && prmptProd < 21) {
+  alert(`У вас в корзине ${prmptProd} ${arrWords[2]}`)
+} else if (prodNum === 1) {
   alert(`У вас в корзине ${prmptProd} ${arrWords[0]}`)
+} else if (prodNum === 0) {
+  alert(`У вас в корзине ${prmptProd} ${arrWords[2]}`)
 } else if (prodNum < 5) {
   alert(`У вас в корзине ${prmptProd} ${arrWords[1]}`)
-} else if (prodNum > 5) {
+} else if (prodNum >= 5) {
   alert(`У вас в корзине ${prmptProd} ${arrWords[2]}`)
 } else {
   alert(`Введите количество ваших товаров в цифрах`)
