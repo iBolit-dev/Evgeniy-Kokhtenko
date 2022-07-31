@@ -81,7 +81,7 @@ console.log(arr1);
 
 const arrNumToFour = []
 
-for (i = 4; i < 401; i++) {
+for (i = 4; i <= 400; i++) {
   arrNumToFour.push(i);
 }
 
