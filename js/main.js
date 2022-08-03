@@ -159,18 +159,20 @@ function lowerCamelCase(str) {
 
   let newMyArr = [];
 
-  for (let i = 1; i < arrStr.length; i++) {
+  for (let i = 0; i < arrStr.length; i++) {
     let el = arrStr[i];
+    if (i === 0) {
+      newMyArr.push(el);
+      continue
+    }
     let upperCase = upperCaseFirst(el)
     newMyArr.push(upperCase)
   }
 
-  let transfToStr = newMyArr.join('')
+  let finalResult = newMyArr.join('')
+  
+  return finalResult;
 
-  arrStr.splice(1, 10000000000, transfToStr)
-
-  let finalResult = arrStr.join('')
-  return finalResult
 }
 
 console.log(lowerCamelCase(myStr));
@@ -193,12 +195,9 @@ const test2 = ['третий', 'проверочный', 'массив']
 
 function inArray(text, arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === text) {
-      return true;
-    } else {
-      return false;
-    }
+    if (arr[i] === text) return true;
   }
+  return false;
 }
 
-console.log(inArray('третий', test2));
+console.log(inArray('проверочный', test2));
